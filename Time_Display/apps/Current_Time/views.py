@@ -8,7 +8,7 @@ def index(request):
         'time' : strftime('%Y-%m-%d %H:%M %p', gmtime())
     }
     print context
-    return HttpResponse(request, 'Current_Time/index.html', context)
+    return render(request, 'Current_Time/index.html', context)
 
 def test(request):
     response = "Hello I am TEST!"
